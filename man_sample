@@ -1,0 +1,90 @@
+.TH SHELL 1 "21 September 2022" GNU "HSH User Manual"
+.SH NAME
+.B hsh
+- A custom shell
+.SH SYNOPSIS
+To use this custom shell, simply run:
+.PP
+.B ./hsh
+.PP
+The shell awaits your input in the following format:
+.PP
+.I command [arguments] [other]
+.SH DESCRIPTION
+HSH is a custom shell developed as part of an educational project. It aims to replicate the functionality of a real shell. A shell, in general, serves as a command language interpreter that processes commands from either the standard input or files. Currently, our shell does not fully support command arguments, but we are actively working on enhancing this feature.
+.PP
+.B Key Features of HSH:
+.IP
+- Execution of commands with arguments
+.IP
+- Support for built-in commands
+.IP
+- Handling of pipes
+.IP
+- Management of command separators (;)
+.IP
+- Implementation of logical operators (&& and ||)
+.IP
+- Variable replacement
+.IP
+- Handling of the $? variable
+.IP
+- Management of the $$ variable
+.SH BUILT-IN FUNCTIONS
+HSH provides the following built-in functions:
+.IP
+.B shell_exit:
+Terminates the shell
+.IP
+.B cd:
+Changes the current working directory
+.IP
+.B help:
+Displays the help page
+.IP
+.B history:
+Shows the command history
+.IP
+.B alias:
+Defines command aliases
+.IP
+.B envir:
+Displays environment variables
+.SH OPTIONS
+As of now, there are no available options.
+.SH EXIT STATUS
+The exit status depends on how a function completes. Each error condition is associated with a specific value, while successful execution always returns 0.
+.SH RETURN VALUE
+The shell returns 0 upon success; otherwise, it returns an appropriate exit value.
+.SH ENVIRONMENT
+HSH interacts with the following environment variables:
+.IP
+- PATH
+.IP
+- $?
+.IP
+- $$
+.SH BUGS
+Currently, there are no known bugs.
+.SH EXAMPLES
+.B Two Ways to Use HSH:
+.IP
+.B Interactive Mode:
+.PP
+ $ ./hsh
+.PP
+#shellaway$ /bin/ls
+.PP
+hsh main.c shell.c
+.PP
+#shellaway$ exit
+.PP
+$
+.PP
+.B Non-Interactive Mode:
+.PP
+$ echo "/bin/ls" | ./hsh
+.PP
+hsh main.c shell.c
+.SH AUTHORS
+HSH was created by Onyiso Chris.
